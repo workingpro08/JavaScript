@@ -1,0 +1,38 @@
+-->"events": events are used to trigger some functions/actions based on user response.
+    we can mention different types of events such as:
+    i.mouseEvents: These events are triggered when user applies response with mouse.
+    eg: onclick,ondblclick,onmouseover,onmouseout,onmousemove etc.
+
+    ii. keyboardEvents: These events are triggered when user applies response with keyboard.
+    eg:  keyup,keydown
+
+    iii. formEvents: These events are triggered when user applies response with forms/inputs.
+    eg: oninput,onchange,onselect,onsubmit etc.
+
+    iv. windowEvents: These events are triggered when user applies response with whole window.
+    eg: onscroll,onreSize,onScrollEnd etc.
+
+-->There are two ways to represent events,they are:
+    i.event handlers:event handlers are declared in html.They don't have any propagation.
+    ii.event listeners:event listeners are defined in JavaScript.They have propogation.
+    ->Ex:create a button with id in html
+         In js,select the button,call addEventListner with two arguments
+        ->'click'
+        ->callback functions
+        <button id="btn">click me<btn>
+        document.getElementById('btn').addEventListner('click',function()
+        {
+            console.log("hello world")
+        })
+
+-->Event propogation:when we apply events to one element,
+automatically it triggers events for another element(usually it is from parent to child or from child to parent).
+    -->In propagation event moves in two ways:
+        i.top to bottom:we can make events move from top to bottom called capturing.
+            ->To make capturing work,we need to define third argument in addEventListner as true.
+        ii.bottom to top:by default,bottom to top approach will be done.it is also called bubbling.
+
+-->In realtime,event propagation is used in one technique called event delegation.
+    ->it is a technique or design pattern which takes event of parent into consideration, 
+        instead of writing individual child items events.
+    ->it is used in clean code and it increases performance.

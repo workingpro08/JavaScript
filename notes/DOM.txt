@@ -1,0 +1,30 @@
+-->"Document Object Model(DOM):
+  ->Browser provides a web API called 'document' which contains total structure and style of the web page.
+  ->Javascript can access,change HTML/CSS by using document object model.
+   
+  i.DOM selection:you can select html elements in javascript in multiple ways.most popular are:
+    a.getElementsByTagName('tag'):it returns an array of all the tag elements from HTML.
+    b.getElementsByClassName('class'):it returns an array of all the class named elements from HTML.
+    c.getElementById('id'):it selects element with specific id from HTML.
+    d.querySelector('query'):it is used to select an element based on query,but it selects only first element that matches the query.
+    e.querySelectorAll:it is used to select an element based on query but it selects all elements which matches the condition.
+
+    eg:console.log(document.getElementsByTagName('h1'))
+      console.log(document.getElementsByClassName('h'))
+      console.log(document.getElementById('heading'))
+      console.log(document.querySelector('.h'))
+      console.log(document.querySelectorAll(".h"))
+
+  ii.Manipulation:
+    a.textContent:textContent is used to access/manipulate the text inside an element.
+    b.innerText:innerText is also used to access/manipulate the text inside an element,but it also considers CSS.
+    c.innerHTML:innerHTML is used to access/change complete HTML code.
+    d.value:value is used to access/change input values.
+    e.classList/className:used to access/change class names.
+    f.style:style is used to access/change style of an element.
+
+  iii.DOM creation:DOM creation is used to create HTML elements using DOM.
+    ->we can use method called 'createElement'.
+    ->To attach the element we can use:
+      a. append:it is used for appending multiple elements.
+      b. appendChild:it is used for appending single element.

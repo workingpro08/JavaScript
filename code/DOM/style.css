@@ -1,0 +1,66 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centering the counter */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #76f765, #ff7451);
+}
+
+/* Counter container */
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Counter display */
+#count {
+    font-size: 3rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Button container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button styles */
+button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 60px;
+}
+
+#incrementBtn {
+    background: #4caf50;
+    color: white;
+}
+
+#decrementBtn {
+    background: #f44336;
+    color: white;
+}
+
+/* Button hover effect */
+button:hover {
+    opacity: 0.8;
+}

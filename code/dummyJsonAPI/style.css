@@ -1,0 +1,91 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #f9f9f9, #ffeaa7);
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    margin: 40px 0;
+    color: #2c3e50;
+}
+
+/* Main Container */
+#main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Product Card */
+.product {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect */
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Product Title */
+.product h2 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: #2d3436;
+}
+
+/* Product Price */
+.product p {
+    font-size: 1.4rem;
+    color: #e17055;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Add to Cart Button */
+.product button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Button Hover */
+.product button:hover {
+    background: #388e3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #main {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

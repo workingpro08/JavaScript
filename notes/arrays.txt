@@ -1,0 +1,109 @@
+-->"Arrays":
+    ->An array is a collection of elements stored in a single variable.
+    eg:let arr=[5,44,6,3]; //Array with 4 elements
+    console.log(arr[0]); //Output:5
+    console.log(arr.length); //Output:4 (Total elements)
+
+-->"Array Methods":
+    1. push()->Add at the End:
+        ->Adds new elements at the end of the array.
+        eg:let arr=[1,2,3];
+        arr.push(4);
+        console.log(arr); //[1,2,3,4]
+
+    2. pop()->Remove from the End:
+        ->Removes the last element.
+        eg:arr.pop();
+        console.log(arr); //[1,2,3]
+
+    3. unshift()->Add at the Beginning:
+        ->Adds new elements at the start of the array.
+        eg:arr.unshift(0);
+        console.log(arr);//[0,1,2,3]
+
+    4. shift()->Remove from the Beginning:
+        ->Removes the first element.
+        eg:arr.shift();
+        console.log(arr);//[1,2,3]
+
+    5. splice()->Insert or Delete Elements.
+        eg:let arr=[5 4,6,7];
+        arr.splice(1);//Remove all elements from index 1
+        console.log(arr); //[5]
+
+        arr=[5,4,6,7]; //Resetting the array for next examples
+
+        arr.splice(1,2); //Remove 2 elements from index 1
+        console.log(arr); //[5,7]
+
+        arr=[5,4,6,7];
+        arr.splice(1,2,"Shekhar");//Remove 2 elements from index 1 and insert "Shekhar"
+        console.log(arr); // [5,"Shekhar",7]
+
+    6. reverse()->Reverse the Array.
+        eg:let arr=[1,2,3];
+        arr.reverse();
+        console.log(arr); //[3,2,1]
+
+    7. includes()->Check if a Value Exists.
+        eg:let arr=[10,20,30];
+        console.log(arr.includes(20)); //true
+        console.log(arr.includes(50)); //false
+
+    8. forEach()->Iterate Over Elements.
+        eg:let arr=[1,2,3];
+        let arr1=[];
+        arr.forEach(function(x,ind) 
+        {
+            arr1[ind]=x*x; //Squaring each element
+        });
+        console.log(arr1); //[1,4,9]
+    -->forEach iterates through the array but cannot return values.use map()if you need to return values.
+
+    9. map()->Iterates through the array and returns a new array.
+            ->Accepts a callback function with parameters:(element,index).
+        eg:let arr=[1,2,3];
+        let result=arr.map(function(x,ind)
+        {
+            let i=x*x;
+            return i;
+        }); //Output:[1,4,9]
+
+    10. filter()->Iterates through the array and returns elements that satisfy a condition.
+        eg:let arr=[2,5,7,10,3];
+        let result=arr.filter(function(x,ind)
+        {
+            return x>5;
+        }); //Output:[7,10]
+
+    11. some()->Returns true if at least one element satisfies the condition,else false.
+        eg:let arr=[2,4,7,1];
+        let result=arr.some(function(x,ind)
+        {
+            return x>5;
+        }); //Output:true
+
+    12. every()->Returns true if all elements satisfy the condition,else false.
+        eg:let arr=[6,4,9]
+        let result=arr.every(function(x,ind)
+        {
+            return x>5;
+        }); //Output:false
+
+    13. sort()->Sorts array elements alphabetically by default.
+              ->Accepts a callback for custom sorting with two elements (a, b):
+              ->If result is negative:keep order.
+              ->If result is positive:swap elements.
+        (i).Ascending Sort:
+            eg:let arr=[5,2,9,1];
+            arr.sort((a,b)=>a-b);
+            console.log(arr); //Output:[1,2,5,9]
+        (ii).Descending Sort:
+            eg:let arr=[5,2,9,1];
+            arr.sort((a,b)=>b-a);
+            console.log(arr); //Output:[9,5,2,1]
+
+    14. reduce()->Performs cumulative operations on array elements.Takes(previousValue,currentValue) and an initial value.
+        eg:let arr=[1,2,3,4];
+        let result=arr.reduce((prev,curr)=>prev+curr,0); //Sum of all elements
+        console.log(result); //Output:10

@@ -1,0 +1,11 @@
+-->"Objects":Physical entities with properties (attributes) and behavior (methods).Represented using curly braces {}.
+    eg:let x={
+        name: "John",
+        age: 55
+        };
+
+-->Accessing Object Values:
+    1.Dot Notation:
+        eg:console.log(x.name); //Output:John
+    2.Bracket Notation(Index Signature):
+        eg:console.log(x['name']); //Output:John

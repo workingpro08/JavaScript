@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <section class="box-container">
+        <div id="gp" class="box grandparent">
+            <div id="p" class="box parent">
+                <div id="c" class="box child">
+                    <p>Click Me(Child)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="button-container">
+        <h2>Select a Fruit:</h2>
+        <div id="buttons">
+            <button class="fruit-btn">🍌 Banana</button>
+            <button class="fruit-btn">🍈 Papaya</button>
+            <button class="fruit-btn">🍎 Apple</button>
+            <button class="fruit-btn">🥭 Mango</button>
+        </div>
+        <p id="output">You clicked: <span id="fruit-name">None</span></p>
+    </section>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

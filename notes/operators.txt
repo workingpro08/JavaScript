@@ -1,0 +1,44 @@
+-->Operators in Javascript are used to perform certain operations on operands.They are:
+    1.Arithmatic operators:Arithmatic operators are used for arithmatic calculations such as addition,subtraction,multiplication etc..,
+        + - used for addition.
+        - - used for subtraction.
+        * - used for multiplication.
+        / - used for division.
+        % - used for remainder.
+        ** - used for power.
+
+    2.Relational operators:These operators are used for comparison and always returns boolean.
+        a>b - checks a is greater than b or not and returns boolean.
+        a<b - checks whether a is less than b or not and returns boolean.
+        a>=b - checks whether a is greater than or equals to b or not.
+        a<=b - checks whether a is less than or equals to b or not.
+        a==b - compares whether a is equals to b or not. it will not compare data type.
+        a===b - compares whether a is equals to b or not. it will compare data type.
+        a!=b - compares whether a is not equals to b or not. it will not compare the data type.
+        a!==b - compares whether a is not quals to b or not . it will compare the data type.
+
+    3.logical operators:logical operators are used to perform logical operations.
+        && -- logical AND -- makes statement true only when both the conditions are true.
+        || -- logical OR -- makes statement false only if both the statements are false.
+        ! -- logical NOT -- makes statement false when condition is true and vice versa.
+
+    4.increment and decrement:increment and decrement operators are used with single operand and they are used to increase/decrease the value by 1.
+        ++ <--> used for increement (increase the value by 1).
+        -- <--> used for decrement (decrease the value by 1).
+        -->They have two variations such as pre and post:
+            pre increment (++a):it increases the value and returns it.
+            post increement(a++):it returns the values and then increases.
+            pre decrement(--a):it decreases the value and returns it.
+            post decrement(a--):it returns the values and then decreases.
+
+    5.assignment operators:These operators are used to assign a value.
+        a+=2 => a=a+2;
+        a-=2 => a=a-2;
+        a*=2 => a=a*2;
+        a/=2 => a=a/2;
+        a%=2 => a=a%2;
+        a**=2 =>a=a**2;
+
+    6.conditional or ternary operator:This operator works with three operands and used to flip statements based on a condition.
+        eg:a=5,b=3;
+        let c= a>b ? a : b;

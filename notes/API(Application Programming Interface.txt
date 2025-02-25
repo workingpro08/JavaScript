@@ -1,0 +1,57 @@
+-->What is an API?
+->Acts as a bridge between the frontend and backend. 
+->Backend sends data to the frontend via endpoints.
+    ->Ex:
+        ->Swiggy uses Google API to get location data.
+        ->Netflix uses APIs for geolocation.
+
+-->Common HTTP Methods in APIs:
+    ->GET: Retrieve data from the server.
+    ->POST: Send new data to the server.
+    ->PUT: Update existing data on the server.
+    ->DELETE: Remove data from the server.
+
+-->How to Use APIs?
+    In the past, APIs were used via:
+        ->XHR(XMLHttpRequest)–old method.
+
+-->Modern method:
+    ->`fetch()` – Built-in Web API for HTTP requests.
+
+-->Understanding 'fetch()' Method:
+    >`fetch()` is used to perform HTTP requests.
+    ->It returns a **Promise**.
+
+-->What is a Promise?
+    ->A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+    ->Promises have three states:
+        1. Pending – Initial state (Operation not completed).
+        2. Fulfilled – Operation completed successfully (Triggers `.then()` block).
+        3. Rejected – Operation failed (Triggers `.catch()` block).
+
+-->Basic Syntax of 'fetch()':
+        fetch(url)
+            .then(function(res) {
+                // Handle success (fulfilled state)
+                return res.json(); // Parse the response to JSON format
+            })
+            .then(function(data) {
+                console.log(data); // Use the fetched data here
+            })
+            .catch(function(err) {
+                // Handle error (rejected state)
+                console.error("Error:", err);
+            });
+
+-->Promise chaining:you can chain multiple asynchronous operations sequentially.
+    ->Ex:
+        fetch(url)
+            .then(() => fetch(anotherUrl))   // Return a new promise
+            .then((res) => res.json())       // Process the next promise
+            .then((data) => console.log(data)) // Final resolved value
+            .catch((err) => console.error("Error:", err)); // Handle errors
+
+-->Try These APIs:
+    1. Random Joke API:https://official-joke-api.appspot.com/random_joke
+    2.Random Quote API:https://dummyjson.com/quotes/random
+    3. Fake Store API (Products List):https://fakestoreapi.com/products

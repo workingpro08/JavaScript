@@ -1,0 +1,166 @@
+-->"Functions":
+    ->functions are the blocks of reusable code which are used to perform a specific task.
+    ->functions are defined with global object, but methods belongs to certain object.
+    ->functions have scope called functional scope.
+-->Syntax:function function_name(parameters) //prototype
+            {
+                //body
+            }
+            function_name() //function call
+
+    1. simple functions.
+        eg:function display()
+        {
+            console.log("Hello World"); //Hello World
+        }
+        display(); //function call
+
+    2. functions can even take parameters.
+        eg:function displayName(n)
+        {
+            console.log(`Welcome ${n}`); //Welcome teja
+        }
+        displayName("teja"); //function call
+
+    3. functions can also take multiple parameters and function can assign default values to parameters 
+       ,which will work only if parameter value is not passed.
+        eg:function add(a,b=10)//Here b is default parameter
+        {
+            console.log(a,b);
+            console.log(a+b);
+        }
+        add(5); //15
+        add("sai","teja"); //saiteja
+        add(2,5,6); //7
+        add("sai") //saiundefined
+
+    4. functions can even return the values using 'return' keyword.
+        eg:function mul(a,b) //Function declaration 
+        {
+            return a*b;
+        }
+        let res=mul(5,4); //function call
+        console.log(res); //20
+
+
+    5. function expressions declare anonymous functions as a variable.
+        eg:let mul=function(a,b) //Function expression
+        {
+            return a*b;
+        }
+        let res=mul(5,4); //function call
+        console.log(res); //20
+
+    6. The modern way of defining a function expression is "Arrow Functions".
+        eg:let mul=(a,b)=>a*b; //Arrow function
+        let res=mul(5,4); //function call
+        console.log(res); //20
+
+    7. (i).If the function body contains only a single statement
+       ,arrow functions do not require braces {} or the return keyword.The return is implicit in such cases.
+            eg:let mul=(a,b)=>a*b;
+            console.log(mul(5,4)); //20
+       (ii).If you have more than one statement inside the function body, you must use {} and explicitly return a value.
+            eg:let mul=(a,b)=>
+            {
+                let result=a*b;
+                return result;  //Explicit return needed
+            };
+            console.log(mul(5,4)); //20
+
+    8. functions can even call themselves providing encapsulation(data security) called IIFE (Immediate Invoke function Expression).
+        -->Syntax:(function() 
+        {
+            console.log("This is an IIFE");
+        })(); //This is an IIFE
+
+        -->IIFE for Data Security:
+        eg:let result=(function()
+        {
+            let secret="Hidden Message"; //Private variable
+            return secret;
+        })();
+        console.log(result); //✅Output:Hidden Message
+        console.log(typeof secret); //❌Error:secret is not defined(Encapsulation)
+        ->Here,secret is not accessible globally because it’s inside an IIFE.
+
+        ->Arrow Function IIFE:
+        eg:(() => console.log("Arrow function IIFE"))(); //Arrow function IIFE
+
+    9. Callback function:
+    -->A callback function is a function that is passed as an argument to another function and executed inside that function.
+        eg:function mad()
+        {
+            console.log("I'm mad");
+        }
+        function bad()
+        {
+            console.log("I'm bad");
+        }
+        function fun(a,b)
+        { //Accepts two functions as parameters
+            a(); //Executes the first function
+            b(); //Executes the second function
+        }
+        fun(mad, bad);
+        ✅Output:I'm mad
+                  I'm bad
+
+        ->Callback in setTimeout():
+        eg:function greet() 
+        {
+            console.log("Hello,world");
+        }
+        setTimeout(greet,2000); //`greet` is passed as a callback and will execute after 2 seconds
+        ✅Output(after 2 seconds):Hello, world
+
+        ->Callback with Parameters:
+        eg:function displayMessage(message)
+        {
+            console.log(message);
+        }
+        function processData(callback) 
+        {
+            let data="Processing Complete";
+            callback(data); //Passing the message to the callback function
+        }
+        processData(displayMessage);
+        ✅Output:Processing Complete
+
+
+    10. Closures & Memoization:
+        ->Closure:An inner function remembers variables from its outer function
+          ,even after the outer function has finished executing.
+          eg:function outer() 
+        {
+            let count=0; //Outer function variable
+            return function inner()
+            {
+                count++; //Inner function remembers `count`
+                console.log(count);
+            };
+        }
+        const counter=outer();
+        counter(); //1
+        counter(); //2(Remembers `count`)
+
+        ->Memorization:A technique where functions cache previous inputs and outputs 
+          to avoid recomputing for the same input,improving performance.
+          eg:function memoizedAdd() 
+        {
+            let cache={}; //Stores previous results
+            return function(num) 
+            {
+                if (num in cache) 
+                {
+                    console.log("Fetching from cache:",num);
+                    return cache[num];
+                }
+                console.log("Calculating result...");
+                cache[num]=num + 10;
+                return cache[num];
+            };
+        }
+        const add=memoizedAdd();
+        console.log(add(5)); //Calculating result...15
+        console.log(add(5)); //Fetching from cache:15

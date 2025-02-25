@@ -1,0 +1,26 @@
+-->"Asynchronous Javascript":Asynchronous Javascript means some functions/actions which takes some time to execute.
+it will execute certain parts of the code asynchronously. 
+   -->Better performance
+   -->Improves responsiveness
+   -->simplify the code
+
+-->we can perform Asynchronous actions in JS using 3 ways:
+   i.callbacks:callbacks are the functions which are given in another function parameters.
+      To use callbacks for Asynchronous JS, we can use Timers.
+      a..setTimeOut(callback,time in ms):This function will execute its callback after the time is over.
+         ->eg:setTimeOut(function()
+         {
+            console.log("hello world")
+         },1000)
+      b. setInterval(callback,time in ms):This function will execute its callback for every time of given time is over.
+         eg:setInterval(function()
+         {
+            console.log("hello world")
+         },1000)
+
+-->To stop setTimeout or setInterval, we have timeStoppers i.e clearTimeout and clearInterval:
+   ->clearTimeout:it is used to remove/clear the traces of setTimeout using its object value.
+   ->clearInterval:it is used to remove/clear the traces of setInterval using its object value.
+
+   ii.Promises
+   iii.async await

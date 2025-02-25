@@ -1,0 +1,18 @@
+BASIC JS:
+    ->let,var,const
+    ->datatypes(numbers-math,string boolean,undefined,null)
+    ->operators
+    ->functions
+    ->arrays
+    ->objects
+    ->if and switch
+    ->loops
+DOM
+ASYNC JS:
+    ->promise
+    ->API
+    ->async await
+    ->ES6
+    ->BOM
+    ->OOPS
+    ->libraries,Jquery

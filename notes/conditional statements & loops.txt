@@ -1,0 +1,95 @@
+-->"Decision making statements or control statements":
+    ->These statements are used to check a condition based on result,they change the flow or execution of code.
+    popular decision making statments are
+    i.if
+    ii.switch
+
+-->if:if is used to check a condition and decide the flow based on the result.
+    simple if:
+    Syntax:if(condition)
+            {
+                //code
+            }
+
+-->if..else:
+    Syntax:if(condition)
+            {
+                //code
+            }
+            else
+            {
+                //code
+            }
+
+-->if..else..if ladder:
+    Syntax:if(condition1)
+            {
+                //code
+            }
+            else if(condition2)
+            {
+                //code
+            }
+            else if(condition3)
+            {
+                //code
+            }
+            else
+            {
+                //code
+            }
+
+-->"if" statements can be written in nested form(if inside if):
+    Syntax:if(condition1)
+            {
+                if(condition2)
+                {
+                    //code
+                }
+            }
+
+-->switch-case:switch is used to select a particular choice of case and runs it .it is an alternative for if..else..if ladder.
+    Syntax:switch(value)
+            {
+                case "value1"://code;break;
+                case "value2"://code;break;
+                case "value3"://code;break;
+                default://code
+            }
+-->There are two types of jump statements which are used to stop the flow of block,they are: 
+    i. break:break is a keyword used to break the current block, it goes to the end of current block execution.
+    ii. continue:continue is a keyword used to break the currentblock, 
+                it goes to start of current block execution and repeat condition checking.
+
+
+-->"loops":loops are used to iterate certain statements until the condition is false.
+    ->There are two kinds of loops:
+        i.entry control loops
+        ii.exit control loops
+
+    i.entry control loops:it checks the conditon at the starting of the loops.
+    eg:while,for
+    ii.exit control loops:it checks the condition at the ending of the loops.
+    eg:do-while
+
+-->while:while is a entry control loop which has initialization,condition & updation at different levels.
+        ->Syntax:initialization;
+                while(condition)
+                {
+                    //code;
+                    updation;
+                }
+
+-->for:for is a entry control loop which is used to iterate certain statements until the condition is false.
+       it contains initialization,conditon,updation in same line.
+    ->standard for Syntax:for(initialization;condition;updation)
+                            {
+                                //statements
+                            }
+
+-->do-while:do-while is a exit control loop which is used to run a loop of statements even the condition is false.
+        ->Syntax:initialization;
+            do{
+                //code;
+                updation;
+            }while(condition);

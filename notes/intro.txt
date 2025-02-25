@@ -1,0 +1,61 @@
+"Javascript": 
+    ->Javascript is used for the functionality of the web page. 
+    ->Javascript is developed by brenden Eich and released in 1995,December 4th. 
+    ->Initially it is named as LiveScript but due to popularity of Java, it is changed as "javascript".
+
+   --> javascript files has extension .js
+   --> javascript can be included in HTML in two ways:
+       i. internal Javascript : Internal Javascript is triggered by 'script' tag.
+       ii. External Javascript: External Javascript is also triggered by 'script' tag but contains 'src' value.
+    we mostly prefer external js
+    
+1. How to comment in Javascript?
+    ->comments are used for reading purposes. They will not be executed
+    ->They are two ways of comments in js
+    i. single line comment: they were written after '//'
+    ii. multiple line comment: they were written between '/* and */
+
+2. Google developer tools and console
+    ->Every browser will have a js engine. JS engine for chrome is v8.
+    ->Every browser also have set of tools to understand ,debug webpage.Those tools are called google developer tools.
+    ->In developer tools we have console,which knows complete JS in a webpage.so we use console for debugging purposes.
+    console.log()--is used to print a value in console.
+
+3. How to declare variables in JS?
+    ->we can declare variables in JS by using var,let and const.A variable is used to store a value.
+    1. var:var is a function scoped variable which can redeclare and reassign.
+    2. let:let is a block scoped variable which can reassign but cannot redeclare.
+    3. const:const is a block scoped variable which cannot redeclare or reassign.
+-->Example:function fun()
+                {
+                    if (true)
+                    {
+                        var a=55;
+                    }
+                    console.log(a)
+                }
+                fun()
+
+                function fun()
+                {
+                    if (true)
+                    {
+                        let b=36;//--uncaught Reference error: b is not defined
+                    }
+                    console.log(b)
+                }
+                fun()
+
+                function fun()
+                {
+                    if (true)
+                    {
+                        const c=34;//--uncaught Reference error: c is not defined
+                    }
+                    console.log(c)
+                }
+                fun()
+
+4. is semicolon mandatory in JS? is JS case sensitive?
+    -->In JS semicolons are automatically inserted by browser in each line.
+    -->JS is case sensitive.

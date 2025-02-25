@@ -1,0 +1,101 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    margin: auto;
+    gap: 20px;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 3rem;
+    margin-top: 40px;
+}
+
+/* Input Container */
+#input {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff4757;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e84118;
+}
+
+/* Main Grid */
+#main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Movie Card */
+.movie {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+/* Hover Effect */
+.movie:hover {
+    transform: translateY(-10px);
+}
+
+/* Movie Image */
+.movie img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Movie Title */
+.movie h2 {
+    margin: 15px 0 0;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    input {
+        width: 200px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

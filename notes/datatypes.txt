@@ -1,0 +1,71 @@
+-->Javascript is dynamically typed language.
+-->In Javascript , the type of a variable changes according to the value it holds. Basic data types are categorized as two types:
+    1.primitve data types
+    2.non-primitive data types
+
+I. primitive data types: these data types are considered purely based on the value. The most used primitive data type is 
+    1.number: Any numerical value is a number
+        eg:let x=20.3152;
+        console.log(typeof x) //number
+    
+    ->number types have some default methods like
+        i.toFixed(noOfDecimalDigits): results number with certain number of DecimalDigits rounded.
+        eg:let n= 2.1548, 
+        console.log(n.toFixed(2)) //2.16
+
+        ii.toPrecision(totalNoOfDigits): results number with total number of digits rounded.
+        eg.let n=23.4156
+        console.log(n.toPrecision(3)) //23.
+
+        iii.toString(baseValue): toString will convert given number into string of another base.
+        eg.let n=23;
+        n.toString(2)--converts n into binary--10111
+
+    ->numbers can also have special default methods called math methods:
+        Math.sqrt(n)----returns square root of n
+        Math.cbrt(n)----returns cube root of n
+        Math.ceil(n)----adjust n to the nearest larger integer
+        Math.floor(n)---adjust n to the nearest smaller integer
+        Math.round(n)---adjust n to nearest integer
+        Math.random()---returns random value between 0 and 1
+        Math.pow(x,y)---return x power y.we can also use x**y
+        Math.max(x,y)---returns maximum value of x and y
+        Math.min(x,y)---returns minimum value of x and y
+
+    2.strings: strings are used to represent alpha numerical values.strings can be represented in " or ' or `(double or single quotation or backticks).
+        eg:let str="raj"/'raj'/`raj`;
+    ->single or double quotations have no difference but they are used based on the purpose.
+        eg:'The gandhi said,"bye bye"' or "the time is 12'0 clock";
+
+    -->Template Literals:
+        ->Js supports dynamic strings without breakage called Template Literals.
+        ->we need to wrap template literals in backticks and variable value must be kept in ${}.
+            eg:salary is 80,000 and tax is 20%,(print in single line-->" amount received after 20% tax for 80,000 is 64,000 ")
+                let s=80000,tax=20;
+                console.log(`The salary is ${s} and tax is ${tax}%,received amount is ${s - (s * tax / 100)}`);
+
+    -->strings have default methods and strings won't be changed by these methods because strings are immutable.
+        i.toUpperCase()---returns string in uppercase letters.
+        ii.toLowerCase()---returns string in lowercase letters.
+        iii.length---returns number of characters in string includes space.
+        iv.trim()---returns string by removing spaces from first and last.
+        v.split('delimiter')---returns an array of strings separated by delimiter.
+        vi.join('delimiter')---returns a string by joining array of strings based on a delimiter.
+        vii.slice(startIndex,endIndex)---cuts the string from starting index value to ending index value(ending is not included).
+        viii.indexOf('char')---returns index of first occurence of the character.
+        ix.lastIndexOf('char')---returns the index of last occurence of the character.
+        x.startsWith(string)---checks whether string is starting with given value or not(returns boolean).
+        xi.endsWith(string)---checks whether string is ending with given value or not(returns boolean).
+        xii.charAt(indexValue)---returns character's index value.
+
+    3.boolean:boolean is used to store true or false.true is considered as 1 and false is considered as 0.
+
+    4.undefined undefined is an accidental absence of value.when js expects a value and it is not there,it fills it with undefined.
+
+    5.null:null means intentional absence of value.
+
+
+II. non-primitive data types: These datatypes depends on the primitive and these are mutable.
+    ->primitive datatypes compares the values.
+    ->non-primitive data types compares the addresses.These are also called Reference Data Types.
+        eg:functions,arrays,objects etc..,

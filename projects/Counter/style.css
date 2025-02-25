@@ -1,0 +1,112 @@
+/* General body styling */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styling */
+.dark {
+    background-color: black;
+    color: white;
+}
+
+/* Dark mode buttons */
+.dark button {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+/* Change mode button */
+#changeMode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Input field styling */
+input {
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 24px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border: 2px solid red;
+}
+
+/* Background color change button */
+#change {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Counter container */
+#counter {
+    width: 50vw;
+    max-width: 400px;
+    height: 50vh;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 3px 10px red;
+    padding: 20px;
+    background-color: white;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Counter text */
+#count {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: red;
+    color: white;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    #counter {
+        width: 80vw;
+        height: 40vh;
+    }
+    button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+    input {
+        width: 150px;
+        font-size: 18px;
+    }
+}
