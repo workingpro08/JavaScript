@@ -1,0 +1,86 @@
+-->"Ecmascript": it sets new values/methods/rules to scripting language like javascript.
+    ->ES6 is released in 2015, also called ES2015.
+    ->current version is ES13 released in 2024, as ES2024.
+    ->ES6 brought great features into javascript such as:
+        ->i. let and const: let and const are block scoped variables.
+             In which let can reassign but can't redeclare and const cannot redeclare and reassign.
+             We can't access let and const before initialization.
+        ->eg: function fun()
+                {
+                    if(true)
+                    {
+                        const a=20;
+                    }
+                console.log(a); //error since you can't block scoped variables outside the block
+                }
+
+        ->ii. template literals: template literals are used for dynamic values of strings without breaking.
+        ->eg:let val=25;
+            console.log(`the value is ${val}`);
+
+        ->iii. default parameters: default parameters are used to set some default values,
+               which will be used when parameters are not passed.
+        ->eg:function fun2(a=2)
+                {
+                    console.log(a+5)
+                }
+                fun2()
+
+        ->iv. REST and SPREAD: 
+            ->Rest is used when accepting multiple values and it will wrap all the values as an array.
+            ->Rest operator is denoted by three dots.
+            ->SPREAD is used when giving multiple values and it will unwrap all the values as an array.
+            ->SPREAD operator is denoted by three dots.
+
+            ->eg:function fun3 (b,c,...a)
+                    {
+                        console.log(a);
+                        let d= [...["john","prasad"],4];
+                        console.log(d);
+                        let x = [1, 2, 3, 4, 5];
+                        [p, ...q] = x;
+                        let y= [...q,4,5];
+                    }
+                fun3(3, 4, 5, 6, 7, 8, 9)
+
+            ->eg:function fruits (a, b, ...c)
+                {
+                    const arr = [a, ...c,"john"];
+                    console.log(arr);
+                }
+                fruits("apple","mango","banana","papaya","dragon")
+
+        ->v. array and object destructuring:we can destructure an array into individual values.
+            ->eg:let arr=[5,4,3];
+                    // old way: var a= arr[0],b=arr[1],c=arr[2];
+                    let [a,b,c] =arr;
+                    // swapping numbers
+                    function swap (a,b)
+                        {
+                            console.log(a + "  " + b);
+                            [b, a] = [a, b];
+                            console.log(a + "  " + b);
+                        }
+                    swap(5,6)
+
+        ->vi. object destructuring: we can destructure an object into individual values.
+            ->eg:let obj=
+                    {
+                        name:"raj",age:50;
+                    }
+                const{name,age}=obj;
+                console.log(name,age);
+
+        ->vii. modules: In javascript, we can reuse certain code in multiple js files
+               and maintain a connection between them using modules.
+            ->There are different module systems like:
+                i.CommonJS(CJS): it uses 'require' to import data and 'module.export' to export the data.
+                ii.AMD(asynchronous module definition): it uses 'define' to define modules and require to import the modules.
+                iii.ES6 module: it uses 'export' for exporting and 'import' for importing.
+                    ->we can export one default value per page 
+                --syntax:export {name,age,title} //normal export
+                --syntax:export default fruits //default export
+
+            ->eg:import {name,age,title} from 'filepath' //normal import
+                 import * as x from 'filepath' //named alias
+                 import fruits from 'filepath'
