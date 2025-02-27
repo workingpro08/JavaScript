@@ -84,3 +84,68 @@
             ->eg:import {name,age,title} from 'filepath' //normal import
                  import * as x from 'filepath' //named alias
                  import fruits from 'filepath'
+
+-->"OOP(object oriented programming)":
+    ->object: object is a real world entity with attributes and methods.
+    ->class: collection of objects or blue print of objects.
+    ->Every class created in js is actually a function.
+    ->A class can create number of objects and provide data members and data methods to it.
+    
+    ->eg:class creation:
+        class classname
+            {
+                
+            }
+        object creation:
+        let obj=new classname(); // default constructor
+    
+    ->when an object is created, automatically a class constructor will be invoked.
+    ->constructors are used to assign/initialize default values to objects.There are two types of constructors:
+        i. default constructors:
+        ->default constructor will be invoked without any parameter values.
+        ii. parameterized constructors:
+        ->parameterized constructors will be invoked by parameter values at the time of object creation.
+
+        ->let obj= new classname(v1,v2,.....) //parameterized constructor
+
+    ->objects can access each and every value or method inside the class except static value(created using 'static' keyword).
+    
+    ->class can identify each object separately by 'this' operator. 'this' refers to current calling object.
+    ->eg1: let obj=
+            {
+                name:"raj",
+                fun:function()
+                {
+                    console.log(this.name);
+                }
+            }
+            obj.fun()
+
+    ->eg2: <button onclick="fun()">click me <button>
+
+    ->classes can have inheritance where one class can aquire properties and methods from another class.
+    ->Inheritance can be applied using 'extends' keyword. Child class should call parent class constructor using super() method.
+        
+        ->Ex:class Fruits
+                {
+                    taste; color;  static c=5;
+                    constructor(a,b)
+                    {
+                        this.taste = a;
+                        this.color=b;
+                    }
+                    getData ()
+                    {
+                        console.log(this.taste+" "+this.color);
+                    }
+                }
+                class Vegetables extends Fruits
+                {
+                    isHealthy;
+                    constructor(a,b,c)
+                    {
+                        super(a, b);
+                        this.isHealthy = c;
+                    }
+                }
+                let x= new Vegetables("good","green",true);

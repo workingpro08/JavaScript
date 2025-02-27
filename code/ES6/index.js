@@ -1,3 +1,8 @@
+
+import a from './script.js'
+console.log(a);
+
+/*
 // Importing named and default exports
 import { title, name, age } from './script.js';
 import fruits from './script.js';
@@ -12,4 +17,4 @@ button.addEventListener('click', () => {
     console.log(`Name: ${name}, Age: ${age}`);
     fruits("apple", "mango", "banana");
     console.log("%c Script Execution Complete!", "color: green; font-weight: bold;");
-});
+});*/

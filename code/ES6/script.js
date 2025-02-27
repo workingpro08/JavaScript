@@ -1,3 +1,8 @@
+
+let a=25;
+export default a;
+
+/*
 // 1. let, const, and block scope
 function fun() {
     if (true) {
@@ -59,3 +64,4 @@ console.log(title); // Outputs the title
 // Export variables and function
 export { name, age, title };
 export default fruits;
+*/
