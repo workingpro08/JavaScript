@@ -15,4 +15,5 @@ ASYNC JS:
     ->ES6
     ->BOM
     ->OOPS
+    ->prototype inheritance
     ->libraries,Jquery

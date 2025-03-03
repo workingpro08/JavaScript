@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheap Market</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid d-flex gap-2">
+                <a class="navbar-brand text-white fs-2" href="#">Cheap <span class="text-primary">Market</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon bg-white"></span>
+                </button>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#electronics">Electronics</a></li>
+                                <li><a class="dropdown-item" href="#mens">Men's Clothing</a></li>
+                                <li><a class="dropdown-item" href="#womens">Women's Clothing</a></li>
+                                <li><a class="dropdown-item" href="#jewellery">Jewellery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="text-white">
+                        <a href="#" class="nav-link">Cart: <span id="cart-count" class="badge bg-primary">0</span></a>
+                    </p>
+                    <button class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Image Slider -->
+        <section class="slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://assets.tatacliq.com/medias/sys_master/images/63923663110174.jpg" alt="image"></div>
+                    <div class="swiper-slide"><img src="https://assets.tatacliq.com/medias/sys_master/images/63923663175710.jpg" alt="image2"></div>
+                    <div class="swiper-slide"><img src="https://assets.tatacliq.com/medias/sys_master/images/63923663568926.jpg" alt="image3"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <!-- Product Sections -->
+        <section id="electronics" class="product-section">
+            <h2 class="text-center fs-3">Top Electronics</h2>
+            <div id="electronicsData" class="product-container"></div>
+        </section>
+
+        <section id="mens" class="product-section">
+            <h2 class="text-center fs-3">Top Men's Clothing</h2>
+            <div id="mensData" class="product-container"></div>
+        </section>
+
+        <section id="womens" class="product-section">
+            <h2 class="text-center fs-3">Top Women's Clothing</h2>
+            <div id="womensData" class="product-container"></div>
+        </section>
+
+        <section id="jewellery" class="product-section">
+            <h2 class="text-center fs-3">Top Jewellery</h2>
+            <div id="jewelleryData" class="product-container"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        © 2025 Cheap Market. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Header styling */
+h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Video container styling */
+.video-container {
+    margin-bottom: 20px;
+}
+
+video {
+    border: 5px solid white;
+    border-radius: 15px;
+}
+
+/* Button styling */
+button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: white;
+    background: #ff7eb3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff4f81;
+}
+
+/* Output display styling */
+#output {
+    margin-top: 20px;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
